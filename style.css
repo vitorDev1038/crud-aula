@@ -1,0 +1,219 @@
+body{
+    margin: 0;
+    padding: 0;
+    padding: 0 25%;
+}
+.interface{
+    max-width: 100vh;
+   
+}
+
+.menu{
+    width: 100vh;
+    background-color: #ffc400;
+    color: white;
+    height: 80px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    h1{
+        font-weight: 300;
+        color: #e60000;
+        font-weight: 700;
+        font-family: "Poppins", sans-serif;
+    }
+}
+
+.registro{
+    margin: 0 15px;
+    h3{
+        font-weight: 400;
+        font-size: 32px;
+        margin-top: 10px;
+    }
+    button{
+        margin: 0 20px;
+        position: relative;
+        top: -15px;
+        background-color: #4990E2;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 20px;
+        padding: 15px 5%;
+        transition: .2s;
+    }
+}
+
+.registro button:hover{
+    transform: scale(1.02);
+    transition: .2s;
+    cursor: pointer;
+}
+
+.table{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    position: relative;
+    left: 35px;
+    
+}
+
+
+th{
+    border: 1px solid #cccccc;
+    padding: 0 10px;
+    height: 60px;
+    text-align: left;
+    font-weight: bold;
+}
+td{
+    border: 1px solid #cccccc;
+    width: 500px;
+    padding: 20px;
+    font-weight: normal;
+}
+
+
+th:nth-child(1), td:nth-child(1){
+    width: 60px;
+}
+th:nth-child(2), td:nth-child(2){
+    width: 160px;
+}
+th:nth-child(3), td:nth-child(3){
+    width: 120px;
+}
+th:nth-child(4), td:nth-child(4){
+    width: 160px;
+}
+th:nth-child(5), td:nth-child(5){
+    width: 180px;
+}
+
+
+
+button.btn-edit{
+    background-color: 	#007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 7px 20px;
+    transition: .2s;
+    width: 90px;
+    height: 5vh;
+}
+
+button.btn-delete{
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 7px 20px;
+    transition: .2s;
+    width: 90px;
+    height: 5vh;
+}
+
+td button:hover{
+    transform: scale(1.02);
+    transition: .2s;
+}
+
+button.btn-delete:hover{
+    box-shadow: 0px 2px 5px rgb(212, 3, 3);
+    transition: .2s;
+    cursor: pointer;
+}
+
+button.btn-edit:hover{
+    box-shadow: 0px 2px 5px rgb(57, 108, 250);
+    transition: .2s;
+    cursor: pointer;
+}
+
+/* FUNDO ESCURO DESFOCADO */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* ESCONDE O MODAL */
+  .hidden {
+    display: none;
+  }
+  
+  /* MODAL BRANCO CENTRALIZADO */
+  .modal {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+  }
+  
+  /* INPUTS DENTRO DO MODAL */
+  .modal input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  /* BOTÕES DO MODAL */
+  .botoes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    
+  }
+  
+  .botoes button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .botoes button[type="submit"] {
+    background-color: rgb(11, 81, 172);
+    color: white;
+  }
+
+  .botoes button[type="submit"]:hover{
+    transform: scale(1.03);
+    transition: .2s;
+  }
+  
+  .botoes button#fechar-modal {
+    background-color: gray;
+    color: white;
+    transition: .2s;
+  }
+
+  .botoes button#fechar-modal:hover{
+    background-color: red;
+    transition: .2s;
+    transform: scale(1.02);
+  }
+  

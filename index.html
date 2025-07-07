@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turma</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="interface">
+
+        <div class="menu">
+            <h1>CRUD 2024091</h1>
+        </div>
+        <div class="registro">
+            <h3>Registro de Empregados</h3>
+            <button id="btn-adicionar">Adicionar Novo Empregado</button>
+        </div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Department</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Rakesh</td>
+                <td>2345</td>
+                <td>IT</td>
+                <td><button class="btn-edit">Edit</button>
+                    <button class="btn-delete">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Priyanka</td>
+                <td>2500</td>
+                <td>HR</td>
+                <td><button class="btn-edit">Edit</button>
+                    <button class="btn-delete">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Anurag</td>
+                <td>4500</td>
+                <td>Sales</td>
+                <td><button class="btn-edit">Edit</button>
+                    <button class="btn-delete">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="overlay hidden" id="overlay">
+          <div class="modal">
+            <h2>Adicionar Funcionário</h2>
+            <form>
+              <input type="text" placeholder="Nome" required>
+              <input type="number" placeholder="Salário" required>
+              <input type="text" placeholder="Departamento" required>
+              <div class="botoes">
+                <button type="submit">Salvar</button>
+                <button type="button" id="fechar-modal">Cancelar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+        <!-- Modal de Editar Funcionário -->
+        <div class="overlay hidden" id="overlay-editar">
+          <div class="modal">
+            <h2>Editar Funcionário</h2>
+            <form>
+              <input type="text" placeholder="Novo Nome" required>
+              <input type="number" placeholder="Novo Salário" required>
+              <input type="text" placeholder="Novo Departamento" required>
+              <div class="botoes">
+                <button type="submit">Salvar Alterações</button>
+                <button type="button" id="fechar-modal-editar">Cancelar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- Modal de Deletar Funcionário -->
+        <div class="overlay hidden" id="overlay-deletar">
+          <div class="modal">
+            <h2>Tem certeza que deseja deletar?</h2>
+            <div class="botoes">
+              <button type="button">Sim</button>
+              <button type="button" id="fechar-modal-deletar">Cancelar</button>
+            </div>
+          </div>
+        </div>
+<script src="./app.js"></script>
+</body>
+</html>
